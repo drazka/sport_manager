@@ -1,21 +1,16 @@
 package pl.sport.sport_manager.entity;
 
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "budget")
-public class Budget {
+@Table(name = "team")
+public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private long budgetaAmount;
-
-    @ManyToOne
-    private User user;
-
-    @OneToOne
-    private GameTeam game_team;
+    private String name;
 
 }

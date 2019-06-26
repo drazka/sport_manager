@@ -2,6 +2,8 @@ package pl.sport.sport_manager.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -26,6 +28,9 @@ public class User {
     private int age;
 
     private boolean isAdmin;
+
+    @OneToMany
+    List<Budget> budgetList = new ArrayList<>();
 
 
 }
