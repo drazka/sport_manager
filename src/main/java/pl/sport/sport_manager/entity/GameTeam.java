@@ -1,7 +1,11 @@
 package pl.sport.sport_manager.entity;
 
+import org.hibernate.validator.constraints.EAN;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "game_team")
@@ -36,4 +40,10 @@ public class GameTeam {
     public void preUpdate() {
         updated = LocalDateTime.now();
     }
+
+    @OneToOne(mappedBy = "gameTeam")
+    private Budget budget;
+
+    @OneToMany
+    List<GameTeamDetails> gameTeamDetailsList = new ArrayList<>();
 }

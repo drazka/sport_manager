@@ -20,8 +20,17 @@ public class Competition {
 
     private LocalDate endDate;
 
-    @OneToMany
+    @ManyToMany(mappedBy = "competitionList")
     private List<Cyclist> cyclistList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "competition")
+    List <CompetitionRanking> competitionRankingList = new ArrayList<>();
+
+    @OneToMany( mappedBy = "competition")
+    List<GameTeam> gameTeamList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "competition")
+    List<Stage> stageList = new ArrayList<>();
 
 
 }

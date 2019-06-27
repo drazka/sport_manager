@@ -3,6 +3,8 @@ package pl.sport.sport_manager.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "stage")
@@ -23,5 +25,6 @@ public class Stage {
     @ManyToOne
     private Competition competition;
 
-
+    @OneToMany(mappedBy = "stage")
+    List<StageRanking> stageRankingsList = new ArrayList<>();
 }

@@ -29,6 +29,16 @@ public class Cyclist {
 
     private long price;
 
+    @OneToMany(mappedBy = "cyclist")
+    List<CompetitionRanking> competitionRankingList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "cyclist")
+    List<GameTeamDetails> gameTeamDetailsList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "cyclist")
+    List<StageRanking> stageRankingList = new ArrayList<>();
+
+
 
 
 }

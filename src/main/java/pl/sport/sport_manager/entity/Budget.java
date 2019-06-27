@@ -16,6 +16,6 @@ public class Budget {
     private User user;
 
     @OneToOne
-    private GameTeam game_team;
+    private GameTeam gameTeam;
 
 }
