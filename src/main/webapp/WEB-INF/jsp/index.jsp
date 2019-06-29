@@ -78,37 +78,39 @@
 					<div class="col-lg-10">
 	          <div class="heading-section text-center ftco-animate">
 	          	<span class="subheading">Game Report</span>
-	            <h2 class="mb-4">Latest Game Result</h2>
+	            <h2 class="mb-4">Latest Stage Result</h2>
 	          </div>
 	          <div class="scoreboard slash">
-	          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019; Baseball Champions League</span></div>
+	          	<div class="divider ftco-animate text-center mb-4"><span>TU WPISZ INFO O ETAPIE I DATY</span></div>
 	          	<div class="sport-team-wrap ftco-animate">
-	          		<span class="vs">vs</span>
+
 		          	<div class="d-sm-flex mb-4">
 			          	<div class="sport-team d-flex align-items-center">
-		          			<div class="img logo" style="background-image: url(images/team-1.jpg);"></div>
-										<div class="text-center px-1 px-md-3 desc">
-											<h3 class="score win"><span>12</span></h3>
-											<h4 class="team-name">Phoenix</h4>
-										</div>
-			          	</div>
-			          	<div class="sport-team d-flex align-items-center">
-		          			<div class="img logo order-sm-last" style="background-image: url(images/team-2.jpg);"></div>
-										<div class="text-center px-1 px-md-3 desc">
-											<h3 class="score lost"><span>8</span></h3>
-											<h4 class="team-name">Mighty Falcons</h4>
-										</div>
+							<ul>
+								<h3>rodzaj 1</h3>
+								<li style="color:black">miejsce 1</li>
+								<li>miejsce 2</li>
+								<li>miejsce 3</li>
+							</ul>
+							<ul>
+								<h3>rodzaj 2</h3>
+								<li style="color:black">miejsce 1</li>
+								<li>miejsce 2</li>
+								<li>miejsce 3</li>
+							</ul>
 			          	</div>
 		          	</div>
 	          	</div>
 	          	<div class="text-center ftco-animate">
-		          	<p class="mb-0"><a href="#" class="btn btn-black">More Details</a></p>
+		          	<p class="mb-0"><a href="#" class="btn btn-black">Stage results</a></p>
 		          </div>
 	          </div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+
 
 		<section class="ftco-section ftco-no-pt ftco-highlights">
 			<div class="container">
