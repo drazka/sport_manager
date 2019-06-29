@@ -12,10 +12,4 @@ public class Budget {
 
     private long budgetaAmount;
 
-    @ManyToOne
-    private User user;
-
-    @OneToOne
-    private GameTeam gameTeam;
-
 }

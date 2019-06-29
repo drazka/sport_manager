@@ -41,9 +41,9 @@ public class GameTeam {
         updated = LocalDateTime.now();
     }
 
-    @OneToOne(mappedBy = "gameTeam")
+    @OneToOne
     private Budget budget;
 
-    @OneToMany
+    @OneToMany(mappedBy = "gameTeam")
     List<GameTeamDetails> gameTeamDetailsList = new ArrayList<>();
 }

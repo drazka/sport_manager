@@ -30,9 +30,6 @@ public class User {
     private boolean isAdmin;
 
     @OneToMany(mappedBy = "user")
-    List<Budget> budgetList = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user")
     List<GameTeam> gameTeamList = new ArrayList<>();
 
 
