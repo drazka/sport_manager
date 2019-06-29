@@ -17,7 +17,7 @@
                 <li class="nav-item active"><a href="games.html" class="nav-link">Games</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="#" class="nav-link">Buy Ticket</a></li>
+                <li class="nav-item cta"><a href="/login" class="nav-link">Login</a></li>
 
             </ul>
         </div>
