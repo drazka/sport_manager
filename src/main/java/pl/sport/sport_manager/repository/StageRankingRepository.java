@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface StageRankingRepository extends JpaRepository<StageRanking, Long> {
-    List<StageRanking> findStageRankingByStage(Stage stage);
+
+    List<StageRanking> findStageRankingsByStage(Stage stage);
 
 }

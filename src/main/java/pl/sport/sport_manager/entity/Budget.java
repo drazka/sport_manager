@@ -12,4 +12,19 @@ public class Budget {
 
     private long budgetaAmount;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getBudgetaAmount() {
+        return budgetaAmount;
+    }
+
+    public void setBudgetaAmount(long budgetaAmount) {
+        this.budgetaAmount = budgetaAmount;
+    }
 }
