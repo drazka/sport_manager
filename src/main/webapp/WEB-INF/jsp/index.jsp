@@ -2,6 +2,7 @@
 		   uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,53 +25,6 @@
       </div>
     </div>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container-fluid px-0">
-	    	<div class="row">
-					<div class="col-md-12">
-						<div class="game-wrap-1 ftco-animate">
-							<div class="row p-2 align-items-center">
-								<div class="col-md-6 pb-4 pb-lg-0 col-lg-3">
-									<div class="text text-vs d-flex">
-										<span class="vs">vs</span>
-										<div class="team-logo text-center">
-											<div class="img" style="background-image: url(images/team-1.jpg);"></div>
-											<h3><span>Phoenix</span></h3>
-										</div>
-										<div class="team-logo text-center">
-											<div class="img" style="background-image: url(images/team-2.jpg);"></div>
-											<h3><span>Jacksonville</span></h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 pb-4 pb-lg-0 col-lg-3">
-									<div class="text">
-										<div class="img"></div>
-										<h3 class="league">Baseball Champions League</h3>
-										<span>Semi-Final</span>
-									</div>
-								</div>
-								<div class="col-md-6 pb-4 pb-lg-0 col-lg-4">
-									<div class="text">
-										<div id="timer" class="d-flex mb-0">
-										  <div class="time" id="days"></div>
-										  <div class="time pl-3" id="hours"></div>
-										  <div class="time pl-3" id="minutes"></div>
-										  <div class="time pl-3" id="seconds"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 pb-4 pb-lg-0 col-lg-2">
-									<div class="text">
-										<p class="mb-0"><a href="#" class="btn btn-primary py-3">Buy Tickets</a></p>
-									</div>
-								</div>
-							</div>
-		        </div>
-					</div>
-	    	</div>
-	    </div>
-    </section>
 		
 		<section class="ftco-section ftco-no-pb">
 			<div class="container">
@@ -118,7 +72,7 @@
 					<div class="col-md-10">
 						<div class="img video-wrap ftco-animate d-flex align-items-center justify-content-center py-5" style="background-image: url(images/victory.jpg); width: 100%;">
 							<p class="text-center mb-0 py-5">
-								<a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
+								<a href="https://vimeo.com/180695910" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
 	    						<span class="ion-ios-play"></span>
 	    					</a>
 	    					<small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
@@ -139,102 +93,25 @@
 				</div>
 				<div class="row ftco-animate">
 					<div class="col-md-12 carousel-game-schedule owl-carousel">
+						<c:forEach items="${allStages}" var="stage">
 						<div class="item">
 							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-1.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-2.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
+								<div class="divider"><p>
+
+									<span><fmt:formatDate value="${stage.startDate}" pattern="dd-MMM-yyyy HH:mm"/></span>
+									-
+									<span><fmt:formatDate value="${stage.endDate}" pattern="dd-MMM-yyyy HH:mm"/></span>
+
+								</p></div>
+								<h1> ${stage.name} </h1>
+								<div class="team-logo text-center">
+									<div class="img" style="background-image: url(images/team-5.jpg);"></div>
+									<h3><span>${stage.place}</span></h3>
 								</div>
 							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-3.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-4.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-5.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-6.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-1.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-2.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-3.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-4.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-5.jpg);"></div>
-										<h3><span>Phoenix</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(images/team-6.jpg);"></div>
-										<h3><span>Jacksonville</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
+	          			</div>
+						</c:forEach> <br />
+
 					</div>
 				</div>
 			</div>

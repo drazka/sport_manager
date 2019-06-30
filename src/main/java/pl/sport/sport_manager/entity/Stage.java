@@ -2,8 +2,8 @@ package pl.sport.sport_manager.entity;
 
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,9 +18,9 @@ public class Stage {
 
     private String place;
 
-    private LocalDateTime startDate;
+    private Date startDate;
 
-    private LocalDateTime endDate;
+    private Date endDate;
 
     @ManyToOne
     private Competition competition;
@@ -52,19 +52,20 @@ public class Stage {
         this.place = place;
     }
 
-    public LocalDateTime getStartDate() {
+
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 

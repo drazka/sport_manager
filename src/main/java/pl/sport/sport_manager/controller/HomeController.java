@@ -30,11 +30,17 @@ public class HomeController {
         return stageRankingList;
     }
 
+    @ModelAttribute("allStages")
+    public List<Stage> findAllStages() {return stageRepository.findAll();
+    }
+
+
     @GetMapping("/")
     public String homePageShow() {
         Stage stage = stageRepository.findById(1);
         List<StageRanking> stageRankingList = stageRankingRepository
                 .findStageRankingsByStage(stage);
+        System.out.println("--------------------------------");
         Stream.of(stageRankingList).forEach((System.out::println));
         return "index"; }
 

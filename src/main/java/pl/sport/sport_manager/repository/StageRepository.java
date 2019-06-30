@@ -10,4 +10,5 @@ import java.util.List;
 public interface StageRepository extends JpaRepository<Stage, Long> {
 
     Stage findById(long Id);
+
 }
