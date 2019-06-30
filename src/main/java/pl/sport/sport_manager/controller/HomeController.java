@@ -32,7 +32,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String homePageShow() {
-        Stage stage = stageRepository.findById(1L);
+        Stage stage = stageRepository.findById(1);
         List<StageRanking> stageRankingList = stageRankingRepository
                 .findStageRankingsByStage(stage);
         Stream.of(stageRankingList).forEach((System.out::println));
