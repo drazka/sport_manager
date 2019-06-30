@@ -83,4 +83,7 @@ public class HomeController {
     @GetMapping("/register")
     public String registerPageShow() { return "register"; }
 
+    @GetMapping("/stage-result")
+    public String stagePageShow() { return "stageResult"; }
+
 }

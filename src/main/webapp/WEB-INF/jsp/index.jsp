@@ -62,7 +62,7 @@
 		          	</div>
 	          	</div>
 				  <div class="text-center ftco-animate">
-				  <p class="mb-0"><a href="#" class="btn btn-black">Stage Resut</a>   <a href="#" class="btn btn-black">General Result</a></p>
+				  <p class="mb-0"><a href="/stage-result" class="btn btn-black">Stage Result</a>   <a href="#" class="btn btn-black">General Result</a></p>
 				  </div>
 				  </div>
 					</div>
