@@ -31,34 +31,40 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-10">
 	          <div class="heading-section text-center ftco-animate">
-	          	<span class="subheading">Game Report</span>
+	          	<span class="subheading">Competition Report</span>
 	            <h2 class="mb-4">Latest Stage Result</h2>
 	          </div>
 	          <div class="scoreboard slash">
-	          	<div class="divider ftco-animate text-center mb-4"><span>TU WPISZ INFO O ETAPIE I DATY</span></div>
+	          	<div class="divider ftco-animate text-center mb-4"><span>${lastStage.name} @ ${lastStage.place}</span></div>
 	          	<div class="sport-team-wrap ftco-animate">
 
 		          	<div class="d-sm-flex mb-4">
 			          	<div class="sport-team d-flex align-items-center">
 							<ul>
-								<h3>rodzaj 1</h3>
-								<li style="color:black">miejsce 1</li>
-								<li>miejsce 2</li>
-								<li>miejsce 3</li>
+								<h3>Youth</h3>
+								<c:forEach items="${lastStageRankingCyclistYoung}" var="lsr">
+									<li style="color:black">${lsr.place} - ${lsr.cyclist.name}</li>
+							</c:forEach> <br />
 							</ul>
 							<ul>
-								<h3>rodzaj 2</h3>
-								<li style="color:black">miejsce 1</li>
-								<li>miejsce 2</li>
-								<li>miejsce 3</li>
+								<h3>Invidual</h3>
+								<c:forEach items="${lastStageRankingCyclistSpeed}" var="lsr">
+									<li style="color:black">${lsr.place} - ${lsr.cyclist.name}</li>
+								</c:forEach> <br />
+							</ul>
+							<ul>
+								<h3>Climber</h3>
+								<c:forEach items="${lastStageRankingCyclistMounting}" var="lsr">
+									<li style="color:black">${lsr.place} - ${lsr.cyclist.name}</li>
+								</c:forEach> <br />
 							</ul>
 			          	</div>
 		          	</div>
 	          	</div>
-	          	<div class="text-center ftco-animate">
-		          	<p class="mb-0"><a href="#" class="btn btn-black">Stage results</a></p>
-		          </div>
-	          </div>
+				  <div class="text-center ftco-animate">
+				  <p class="mb-0"><a href="#" class="btn btn-black">Stage Resut</a>   <a href="#" class="btn btn-black">General Result</a></p>
+				  </div>
+				  </div>
 					</div>
 				</div>
 			</div>
@@ -87,8 +93,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 heading-section text-center ftco-animate mb-4">
-          	<span class="subheading">Game Schedule</span>
-          	<h2 class="mb-4">Game Schedule</h2>
+          	<span class="subheading">Competition Schedule</span>
+          	<h2 class="mb-4">${competition.name}</h2>
 					</div>
 				</div>
 				<div class="row ftco-animate">
@@ -125,9 +131,14 @@
     			<div class="col-md-5 py-md-5">
     				<div class="row justify-content-start py-md-5">
 		          <div class="col-md-12 heading-section heading-section-white ftco-animate">
-		            <h2 class="mb-4">About the Phoenix</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-		            <p><a href="#" class="btn btn-secondary py-3 px-4">Watch Game</a></p>
+		            <h2 class="mb-4">THE BEST PLAYERS</h2>
+					  <ul>
+						  <h3>THE BEST PLAYERS</h3>
+						  <c:forEach items="${lastStageRankingCyclistYoung}" var="lsr">
+							  <li style="color:black">${lsr.place} - ${lsr.cyclist.name}</li>
+						  </c:forEach> <br />
+					  </ul>
+		            <p><a href="#" class="btn btn-secondary py-3 px-4">Game results</a></p>
 		          </div>
 		        </div>
 	        </div>
@@ -139,12 +150,14 @@
     	</div>
     </section>
 
+
+
     <section class="ftco-section ftco-game-schedule">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-6 heading-section text-center ftco-animate">
           	<span class="subheading">Schedule</span>
-            <h2 class="mb-4">Next Match</h2>
+            <h2 class="mb-4">Next Stage</h2>
           </div>
         </div>
         <div class="row">
@@ -192,21 +205,6 @@
 								</div>
 								<div class="team-logo text-center">
 									<div class="img" style="background-image: url(images/team-6.jpg);"></div>
-									<h3><span>Jacksonville</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="game-sched text-vs text-center mb-1 ftco-animate">
-							<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-							<div class="d-flex sched-wrap">
-								<span class="vs">vs</span>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-1.jpg);"></div>
-									<h3><span>Phoenix</span></h3>
-								</div>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-2.jpg);"></div>
 									<h3><span>Jacksonville</span></h3>
 								</div>
 							</div>
@@ -314,58 +312,15 @@
     		</div>
     	</div>
     </section>
-   	
-		
-		<section class="ftco-section services-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-flex">
-              <div class="icon"><span class="flaticon-baseball-ball"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Baseball Training</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-flex">
-              <div class="icon"><span class="flaticon-helmet"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Softball Training</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-flex">
-              <div class="icon"><span class="flaticon-helmet-1"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Basic Defense</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-flex">
-              <div class="icon"><span class="flaticon-baseball-bat"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Basic Tactics</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <section class="ftco-section testimony-section slash">
     	<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-          	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4">Happy Viewers</h2>
+          	<span class="subheading">Our Users</span>
+            <h2 class="mb-4">Happy Users</h2>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
@@ -470,7 +425,7 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Our Growth</a></h3>
               </div>
             </div>
           </div>
@@ -488,7 +443,7 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Marketing Growth</a></h3>
               </div>
             </div>
           </div>
@@ -506,7 +461,7 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Sport Growth</a></h3>
               </div>
             </div>
           </div>
@@ -524,7 +479,7 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Growth</a></h3>
               </div>
             </div>
           </div>
@@ -576,7 +531,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-9 text-wrap text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our upcoming match</h2>
+              <h2>Subcribe to our upcoming games</h2>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-10">
                   <form action="#" class="subscribe-form">
