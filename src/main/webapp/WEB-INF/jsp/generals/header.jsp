@@ -15,7 +15,7 @@
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item active"><a href="games.html" class="nav-link">Games</a></li>
-                <li class="nav-item"><a href="/stage-result" class="nav-link">Stage results</a></li>
+                <li class="nav-item"><a href="/stages-result" class="nav-link">Stage results</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 <li class="nav-item cta"><a href="/login" class="nav-link">Login</a></li>
 
