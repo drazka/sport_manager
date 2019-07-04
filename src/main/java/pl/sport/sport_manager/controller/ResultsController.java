@@ -17,7 +17,7 @@ import pl.sport.sport_manager.repository.StageRankingRepository;
 import pl.sport.sport_manager.repository.StageRepository;
 
 import java.util.List;
-import java.util.stream.Stream;
+
 
 @Controller
 public class ResultsController {
