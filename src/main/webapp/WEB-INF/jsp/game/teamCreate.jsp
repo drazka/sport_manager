@@ -27,18 +27,12 @@
 
 <section>
     <ul id="sortable1" class="list-group connectedSortable">
-        <li class="list-group-item active">Lion</li>
+        <li class="list-group-item">Lion</li>
         <li class="list-group-item">Dog</li>
         <li class="list-group-item">Cat</li>
         <li class="list-group-item">Tiger</li>
     </ul>
 
-    <ul id="sortable2" class="list-group connectedSortable">
-        <li class="list-group-item active">Fish</li>
-        <li class="list-group-item">Bird</li>
-        <li class="list-group-item">Falcon</li>
-        <li class="list-group-item">Mouse</li>
-    </ul>
 </section>
 
 

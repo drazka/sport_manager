@@ -12,7 +12,7 @@
   <body>
     <%@ include file="/WEB-INF/jsp/generals/header.jsp" %>
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('/resources/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
@@ -76,7 +76,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10">
-						<div class="img video-wrap ftco-animate d-flex align-items-center justify-content-center py-5" style="background-image: url(images/victory.jpg); width: 100%;">
+						<div class="img video-wrap ftco-animate d-flex align-items-center justify-content-center py-5" style="background-image: url(/resources/images/victory.jpg); width: 100%;">
 							<p class="text-center mb-0 py-5">
 								<a href="https://vimeo.com/180695910" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
 	    						<span class="ion-ios-play"></span>
@@ -111,7 +111,7 @@
 								</p></div>
 								<h1> ${stage.name} </h1>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-5.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-5.jpg);"></div>
 									<h3><span>${stage.place}</span></h3>
 								</div>
 							</div>
@@ -124,7 +124,7 @@
 		</section>
 
 
-    <section class="ftco-section img ftco-about ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_2.jpg);"  data-stellar-background-ratio="0.5">
+    <section class="ftco-section img ftco-about ftco-no-pt ftco-no-pb" style="background-image: url(/resources/images/bg_2.jpg);"  data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
     	<div class="container">
     		<div class="row d-flex">
@@ -144,7 +144,7 @@
 	        </div>
 	        <div class="col-md-1"></div>
 	        <div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/resources/images/about.jpg);"></div>
     			</div>
         </div>
     	</div>
@@ -162,7 +162,7 @@
         </div>
         <div class="row">
         	<div class="col-md-7 d-flex">
-        		<div class="img img-game d-flex align-selg-stretch" style="background-image: url(images/about-1.jpg);"></div>
+        		<div class="img img-game d-flex align-selg-stretch" style="background-image: url(/resources/images/about-1.jpg);"></div>
         	</div>
         	<div class="col-md-5">
         		<div class="game-sched text-vs text-center mb-1 ftco-animate">
@@ -170,11 +170,11 @@
 							<div class="d-flex sched-wrap">
 								<span class="vs">vs</span>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-1.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-1.jpg);"></div>
 									<h3><span>Phoenix</span></h3>
 								</div>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-2.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-2.jpg);"></div>
 									<h3><span>Jacksonville</span></h3>
 								</div>
 							</div>
@@ -185,11 +185,11 @@
 							<div class="d-flex sched-wrap">
 								<span class="vs">vs</span>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-3.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-3.jpg);"></div>
 									<h3><span>Phoenix</span></h3>
 								</div>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-4.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-4.jpg);"></div>
 									<h3><span>Jacksonville</span></h3>
 								</div>
 							</div>
@@ -200,11 +200,11 @@
 							<div class="d-flex sched-wrap">
 								<span class="vs">vs</span>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-5.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-5.jpg);"></div>
 									<h3><span>Phoenix</span></h3>
 								</div>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(images/team-6.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-6.jpg);"></div>
 									<h3><span>Jacksonville</span></h3>
 								</div>
 							</div>
@@ -214,7 +214,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section ftco-team img" style="background-image:url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+    <section class="ftco-section ftco-team img" style="background-image:url(/resources/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
     	<div class="container">
     		<div class="row justify-content-center pb-5">
@@ -229,7 +229,7 @@
     				<div class="carousel-team owl-carousel">
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-1.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-1.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Catcher</span>
@@ -238,7 +238,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-2.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-2.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Tight End</span>
@@ -247,7 +247,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-3.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-3.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Pitcher</span>
@@ -256,7 +256,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-4.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-4.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">First Baseman</span>
@@ -265,7 +265,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-5.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-5.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Second Baseman</span>
@@ -274,7 +274,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-6.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-6.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Third Baseman</span>
@@ -283,7 +283,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-7.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-7.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Right Fielder</span>
@@ -292,7 +292,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-7.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-7.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Center Fielder</span>
@@ -301,7 +301,7 @@
     				</div>
     				<div class="item">
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(images/staff-7.jpg);"></div>
+		    				<div class="img" style="background-image: url(/resources/images/staff-7.jpg);"></div>
 		    				<div class="text">
 		    					<h3 class="mb-0">David Scott</h3>
 		    					<span class="position">Left Fielder</span>
@@ -328,7 +328,7 @@
             <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
                 <div class="testimony-wrap text-center">
-                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                  <div class="user-img mb-4" style="background-image: url(/resources/images/person_1.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -342,7 +342,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center">
-                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                  <div class="user-img mb-4" style="background-image: url(/resources/images/person_2.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -356,7 +356,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center">
-                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                  <div class="user-img mb-4" style="background-image: url(/resources/images/person_3.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -370,7 +370,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center">
-                  <div class="user-img mb-4" style="background-image: url(images/person_4.jpg)">
+                  <div class="user-img mb-4" style="background-image: url(/resources/images/person_4.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -384,7 +384,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center">
-                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                  <div class="user-img mb-4" style="background-image: url(/resources/images/person_3.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -413,7 +413,7 @@
         <div class="row d-flex">
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_1.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -431,7 +431,7 @@
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_2.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -449,7 +449,7 @@
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_3.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 mb-4 topp">
@@ -467,7 +467,7 @@
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_4.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -526,7 +526,7 @@
     	</div>
     </section>
 		
-		<section class="ftco-subscribe img" style="background-image: url(images/bg_2.jpg);">
+		<section class="ftco-subscribe img" style="background-image: url(/resources/images/bg_2.jpg);">
       <div class="overlay">
         <div class="container">
           <div class="row d-flex justify-content-center">

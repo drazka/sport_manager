@@ -55,6 +55,16 @@
 			<version>2.1.8.RELEASE</version>
 		</dependency>
 
+		<!--dodane dla security-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 <!--poprawiona wersja-->
 		<dependency>
