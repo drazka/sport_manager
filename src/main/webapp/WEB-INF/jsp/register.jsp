@@ -11,14 +11,14 @@
 <body>
 <%@ include file="/WEB-INF/jsp/generals/header.jsp" %>
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
                 <h1 class="mb-3 bread">Play The Game</h1>
                 <p class="breadcrumbs">
-                    <span class="mr-2"><a href="/login">LOGIN <i class="ion-ios-arrow-forward"></i></a></span>
+                    <span class="mr-2"><a href="/TourDeFranceGame/login">LOGIN <i class="ion-ios-arrow-forward"></i></a></span>
 
                 </p>
             </div>
@@ -31,30 +31,53 @@
     <div class="container">
         <div class="row block-9">
             <div class="col-md-6 order-md-last d-flex">
-                <form action="#" class="bg-light p-5 contact-form">
+                <form:form method="POST" modelAttribute="userForm" class="bg-light p-5 contact-form">
                     <h3 class="heading">REGISTER</h3>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Surname">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Login">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Confirm Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="email">
-                    </div>
-                    <div class="form-group">
+                    <spring:bind path="firstName">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="firstName" class="form-control" placeholder="First Name"
+                                        autofocus="true"></form:input>
+                            <form:errors path="firstName"></form:errors>
+                        </div>
+                    </spring:bind>
+                    <spring:bind path="lastName">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="lastName" class="form-control" placeholder="Last Name"
+                                        autofocus="true"></form:input>
+                            <form:errors path="lastName"></form:errors>
+                        </div>
+                    </spring:bind>
+                    <spring:bind path="username">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="username" class="form-control" placeholder="Username"
+                                        autofocus="true"></form:input>
+                            <form:errors path="username"></form:errors>
+                        </div>
+                    </spring:bind>
+                    <spring:bind path="password">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="password" class="form-control" placeholder="Password"
+                                        autofocus="true"></form:input>
+                            <form:errors path="password"></form:errors>
+                        </div>
+                    </spring:bind>
+                    <spring:bind path="passwordConfirm">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="passwordConfirm" class="form-control" placeholder="Confirm your password"
+                                        autofocus="true"></form:input>
+                            <form:errors path="passwordConfirm"></form:errors>
+                        </div>
+                    </spring:bind>
+                    <spring:bind path="email">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="email" class="form-control" placeholder="email"
+                                        autofocus="true"></form:input>
+                            <form:errors path="email"></form:errors>
+                        </div>
+                    </spring:bind>
                         <input type="submit" value="Play!" class="btn btn-primary py-3 px-5">
                     </div>
-                </form>
+                </form:form>
 
             </div>
 

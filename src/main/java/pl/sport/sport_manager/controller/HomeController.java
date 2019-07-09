@@ -106,14 +106,14 @@ public class HomeController {
         return "register"; }
 
     @PostMapping("/register")
-    public String registerPagePost(@ModelAttribute("ueForm") User userForm, BindingResult bindingResult) {
+    public String registerPagePost(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
         if( bindingResult.hasErrors()) {
             return "register";
         }
 
         userService.save(userForm);
-        securityService.autoLogin(userForm.getLogin(), userForm.getPasswordConfirm());
+        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
         return "redirect:/createTeam"; }
 
 
