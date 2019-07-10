@@ -6,7 +6,7 @@ import pl.sport.sport_manager.entity.GameTeam;
 
 import java.util.List;
 
-//@Repository
-//public interface GameTeamRepository extends JpaRepository<Long, GameTeam> {
-//    //List<GameTeam> findAllByUserId(Long id);
-//}
+@Repository
+public interface GameTeamRepository extends JpaRepository<GameTeam, Long> {
+    List<GameTeam> findAllByUserId(Long id);
+}
