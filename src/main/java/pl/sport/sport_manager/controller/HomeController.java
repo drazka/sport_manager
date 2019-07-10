@@ -91,6 +91,10 @@ public class HomeController {
     public String homePageShow(Model model) {
         return "index"; }
 
+//    @PostMapping(path = "/logout")
+//    public String logout(Model model) {
+//        return "redirect:/TourDeFranceGame/login"; }
+
     @GetMapping("/login")
     public String loginPageShow(Model model, String error, String logout) {
         if (error != null)

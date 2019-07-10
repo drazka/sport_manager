@@ -34,14 +34,18 @@
             <div class="col-md-6 order-md-last d-flex">
                 <form method="POST" action="${contextPath}/TourDeFranceGame/login" class="bg-light p-5 contact-form">
                     <h3 class="heading">LOG IN</h3>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Login">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Log in" class="btn btn-primary py-3 px-5">
+
+                    <div class="form-group ${error != null ? 'has-error' : ''}">
+                        <span>${message}</span>
+                        <input name="username" type="text" class="form-control" placeholder="Username"
+                               autofocus="true"/>
+                        <input name="password" type="password" class="form-control" placeholder="Password"/>
+                        <span>${error}</span>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                        <h4 class="text-center"><a href="${contextPath}/TourDeFranceGame/register">Create an account</a></h4>
+
                     </div>
                 </form>
 
