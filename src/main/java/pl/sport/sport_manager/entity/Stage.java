@@ -22,6 +22,10 @@ public class Stage {
 
     private Date endDate;
 
+    private long distance;
+
+    private String typeOfStage;
+
     @ManyToOne
     private Competition competition;
 
@@ -83,5 +87,21 @@ public class Stage {
 
     public void setStageRankingsList(List<StageRanking> stageRankingsList) {
         this.stageRankingsList = stageRankingsList;
+    }
+
+    public long getDistance() {
+        return distance;
+    }
+
+    public void setDistance(long distance) {
+        this.distance = distance;
+    }
+
+    public String getTypeOfStage() {
+        return typeOfStage;
+    }
+
+    public void setTypeOfStage(String typeOfStage) {
+        this.typeOfStage = typeOfStage;
     }
 }

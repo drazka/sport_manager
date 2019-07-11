@@ -7,4 +7,5 @@ import pl.sport.sport_manager.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
+    User findUserById(Long id);
 }

@@ -1,8 +1,11 @@
 package pl.sport.sport_manager.entity;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -134,4 +137,20 @@ public class User {
     public Long getId() {
         return id;
     }
+
+    public User(String firstName, String lastName, String username, String email, String password, String passwordConfirm, Set<Role> roles, LocalDate dateOfBirth, int age, boolean isAdmin, List<GameTeam> gameTeamList) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.passwordConfirm = passwordConfirm;
+        this.roles = roles;
+        this.dateOfBirth = dateOfBirth;
+        this.age = age;
+        this.isAdmin = isAdmin;
+        this.gameTeamList = gameTeamList;
+    }
+
+    public User(){};
 }

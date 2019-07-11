@@ -26,12 +26,13 @@
 </section>
 
 <section>
-    <ul id="sortable1" class="list-group connectedSortable">
-        <li class="list-group-item">Lion</li>
-        <li class="list-group-item">Dog</li>
-        <li class="list-group-item">Cat</li>
-        <li class="list-group-item">Tiger</li>
-    </ul>
+    <form:form method="post" modelAttribute="gameTeam">
+
+        name: <form:input path="name"/><br>
+        <form:errors path = "name"/>
+
+        <input type="submit" value="Save">
+    </form:form>
 
 </section>
 

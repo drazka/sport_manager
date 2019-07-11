@@ -20,6 +20,7 @@ public class Cyclist {
     private String country;
     private int height;
     private int weight;
+    private String shirtNumber;
 
     @ManyToOne
     private Team team;
@@ -38,11 +39,11 @@ public class Cyclist {
     @OneToMany(mappedBy = "cyclist")
     List<StageRanking> stageRankingList = new ArrayList<>();
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -148,5 +149,13 @@ public class Cyclist {
 
     public void setStageRankingList(List<StageRanking> stageRankingList) {
         this.stageRankingList = stageRankingList;
+    }
+
+    public String getShirtNumber() {
+        return shirtNumber;
+    }
+
+    public void setShirtNumber(String shirtNumber) {
+        this.shirtNumber = shirtNumber;
     }
 }
