@@ -10,21 +10,21 @@ public class Budget {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private long budgetaAmount;
+    private long budgetAmount;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public long getBudgetaAmount() {
-        return budgetaAmount;
+    public long getBudgetAmount() {
+        return budgetAmount;
     }
 
-    public void setBudgetaAmount(long budgetaAmount) {
-        this.budgetaAmount = budgetaAmount;
+    public void setBudgetAmount(long budgetAmount) {
+        this.budgetAmount = budgetAmount;
     }
 }

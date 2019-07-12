@@ -26,12 +26,12 @@
 </section>
 
 <section>
-    <form:form method="post" modelAttribute="gameTeam">
+    <h3 class="heading">CREATE YOUR TEAM</h3>
 
-        name: <form:input path="name"/><br>
+    <form:form method="post" modelAttribute="gameTeam" class="bg-light p-5 contact-form">
+        name: <form:input path="name" class="form-control" autofocus="true"/><br>
         <form:errors path = "name"/>
-
-        <input type="submit" value="Save">
+        <input type="submit" value="Go and choose your Cyclists" class="btn btn-primary py-3 px-5">
     </form:form>
 
 </section>

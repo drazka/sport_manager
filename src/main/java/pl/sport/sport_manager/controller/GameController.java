@@ -10,8 +10,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import pl.sport.sport_manager.entity.Budget;
 import pl.sport.sport_manager.entity.GameTeam;
 import pl.sport.sport_manager.entity.User;
+import pl.sport.sport_manager.repository.BudgetRepository;
 import pl.sport.sport_manager.repository.CompetitionRepository;
 import pl.sport.sport_manager.repository.GameTeamRepository;
 import pl.sport.sport_manager.repository.UserRepository;
@@ -22,6 +24,9 @@ import javax.validation.Valid;
 @Controller
 public class GameController {
 
+    final static long budgetAmount = 1000000;
+    final static long competitionId = 1;
+
     @Autowired
     GameTeamRepository gameTeamRepository;
 
@@ -30,6 +35,9 @@ public class GameController {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    BudgetRepository budgetRepository;
 
     @GetMapping("/createTeam")
     public String createGameTeam(Model model) {
@@ -42,10 +50,14 @@ public class GameController {
         if (result.hasErrors()) {
             return "/game/teamCreate";
         }
-        gameTeam.setCompetition(competitionRepository.findById(1L));
+        gameTeam.setCompetition(competitionRepository.findById(competitionId));
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User user = userRepository.findByUsername(userDetails.getUsername());
         gameTeam.setUser(user);
+        Budget budget = new Budget();
+        budget.setBudgetAmount(budgetAmount);
+        budgetRepository.save(budget);
+        gameTeam.setBudget(budget);
         gameTeamRepository.save(gameTeam);
         return "redirect:/chooseCyclists";
     }
