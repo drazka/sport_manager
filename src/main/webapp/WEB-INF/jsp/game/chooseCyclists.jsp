@@ -26,12 +26,11 @@
 </section>
 
 <section>
-    <h3 class="heading">CHOOSE YOUR CYCLIST</h3>
+    <h3 class="heading">CHOOSE YOUR TEAM to EDIT</h3>
 
-    <form:form method="post" modelAttribute="gameTeam" class="bg-light p-5 contact-form">
-        name: <form:input path="name" class="form-control" autofocus="true"/><br>
-        <form:errors path = "name"/>
-        <input type="submit" value="Go and choose your Cyclists" class="btn btn-primary py-3 px-5">
+    <form:form method="post" modelAttribute="user" class="bg-light p-5 contact-form">
+        your teams: <form:select path="gameTeamList" items="${gameTeamList}" itemLabel="name" itemValue="id"/><br>
+        <form:errors path = "gameTeamList"/>
     </form:form>
 
 </section>

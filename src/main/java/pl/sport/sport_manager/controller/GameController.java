@@ -19,6 +19,7 @@ import pl.sport.sport_manager.repository.GameTeamRepository;
 import pl.sport.sport_manager.repository.UserRepository;
 
 import javax.validation.Valid;
+import java.util.List;
 
 
 @Controller
@@ -38,6 +39,12 @@ public class GameController {
 
     @Autowired
     BudgetRepository budgetRepository;
+    
+    private User getLoggedInUser() {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = userRepository.findByUsername(userDetails.getUsername());
+        return user;
+    }
 
     @GetMapping("/createTeam")
     public String createGameTeam(Model model) {
@@ -51,8 +58,7 @@ public class GameController {
             return "/game/teamCreate";
         }
         gameTeam.setCompetition(competitionRepository.findById(competitionId));
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        User user = userRepository.findByUsername(userDetails.getUsername());
+        User user = getLoggedInUser();
         gameTeam.setUser(user);
         Budget budget = new Budget();
         budget.setBudgetAmount(budgetAmount);
@@ -64,6 +70,8 @@ public class GameController {
 
     @GetMapping("/chooseCyclists")
     public String addCyclist(Model model) {
+        User user = getLoggedInUser();
+        model.addAttribute("user", user);
         return "/game/chooseCyclists"; }
 }
 

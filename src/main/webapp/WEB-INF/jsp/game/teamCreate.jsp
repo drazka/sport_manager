@@ -31,6 +31,7 @@
     <form:form method="post" modelAttribute="gameTeam" class="bg-light p-5 contact-form">
         name: <form:input path="name" class="form-control" autofocus="true"/><br>
         <form:errors path = "name"/>
+        <form:hidden path="id"/>
         <input type="submit" value="Go and choose your Cyclists" class="btn btn-primary py-3 px-5">
     </form:form>
 
