@@ -10,13 +10,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import pl.sport.sport_manager.entity.Budget;
-import pl.sport.sport_manager.entity.GameTeam;
-import pl.sport.sport_manager.entity.User;
-import pl.sport.sport_manager.repository.BudgetRepository;
-import pl.sport.sport_manager.repository.CompetitionRepository;
-import pl.sport.sport_manager.repository.GameTeamRepository;
-import pl.sport.sport_manager.repository.UserRepository;
+import pl.sport.sport_manager.entity.*;
+import pl.sport.sport_manager.repository.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,6 +34,13 @@ public class GameController {
 
     @Autowired
     BudgetRepository budgetRepository;
+
+    @Autowired
+    CyclistRepository cyclistRepository;
+
+    @ModelAttribute("cyclists")
+    public List<Cyclist> cyclist() {return cyclistRepository.findAll();}
+
     
     private User getLoggedInUser() {
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -53,7 +55,7 @@ public class GameController {
 
     @PostMapping("/createTeam")
     public String addNewGameTeam(@ModelAttribute @Valid GameTeam gameTeam,
-                                BindingResult result, Authentication authentication) {
+                                BindingResult result) {
         if (result.hasErrors()) {
             return "/game/teamCreate";
         }
@@ -73,5 +75,24 @@ public class GameController {
         User user = getLoggedInUser();
         model.addAttribute("user", user);
         return "/game/chooseCyclists"; }
+
+
+    @PostMapping("/chooseCyclists")
+    public String editTeam(Model model,@ModelAttribute @Valid User user,
+                                 BindingResult result) {
+        if (result.hasErrors()) {
+            return "/game/chooseCyclists";
+        }
+
+        List <GameTeam> gameTeamList = user.getGameTeamList();
+        GameTeam gameTeamToEdit = gameTeamList.get(0);
+        model.addAttribute("gameTeamToEdit", gameTeamToEdit);
+        GameTeamDetails gameTeamDetails = new GameTeamDetails();
+        model.addAttribute("gameTeamToEdit", gameTeamToEdit);
+        model.addAttribute("gameTeamDetails", gameTeamDetails);
+        return "/game/editTeam";
+    }
+
+
 }
 
