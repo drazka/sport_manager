@@ -10,7 +10,7 @@
   <body>
     <%@ include file="/WEB-INF/jsp/generals/header.jsp" %>
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -32,7 +32,7 @@
           			<span class="icon-map-signs"></span>
           		</div>
           		<h3 class="mb-3">Address</h3>
-	            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+	            <p>Poland, Warsaw</p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
@@ -50,7 +50,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-3">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+	            <p><a href="mailto:info@yoursite.com">info@mysite.com</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
@@ -59,7 +59,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-3">Website</h3>
-	            <p><a href="#">yoursite.com</a></p>
+	            <p><a href="#">mysite.com</a></p>
 	          </div>
           </div>
         </div>
@@ -97,7 +97,7 @@
       </div>
     </section>
 		
-		<section class="ftco-subscribe img" style="background-image: url(images/bg_2.jpg);">
+		<section class="ftco-subscribe img" style="background-image: url(/resources/images/bg_2.jpg);">
       <div class="overlay">
         <div class="container">
           <div class="row d-flex justify-content-center">

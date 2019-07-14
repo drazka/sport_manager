@@ -10,7 +10,7 @@
   <body>
     <%@ include file="/WEB-INF/jsp/generals/header.jsp" %>
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -36,7 +36,7 @@
             <h3 class="mb-3"> Individual Classification </h3>
             <div class="row">
                 <div class="col-md-4 d-inline-flex">
-                    <div class="img img-game d-flex align-selg-stretch" style="background-image: url(/images/image_6.jpg);"></div>
+                    <div class="img img-game d-flex align-selg-stretch" style="background-image: url(/resources/images/image_6.jpg);"></div>
                 </div>
                 <div class="col-md-8 d-flex">
 
@@ -115,7 +115,7 @@
               <!--Table body-->
             </table>
             <!--Table-->
-            <img src="/images/image_7.jpg" alt="" class="img-fluid">
+            <img src="/resources/images/image_7.jpg" alt="" class="img-fluid">
             <div>
             <h2 class="mb-3"> ${stage.name}</h2>
             <h3 class="mb-3"> Youth Classification </h3
@@ -167,7 +167,7 @@
           </div>
     </section>
 		
-    <section class="ftco-subscribe img" style="background-image: url(/images/bg_2.jpg);">
+    <section class="ftco-subscribe img" style="background-image: url(/resources/images/bg_2.jpg);">
       <div class="overlay">
         <div class="container">
           <div class="row d-flex justify-content-center">

@@ -28,9 +28,9 @@
 <section>
     <h2 class="heading">EDIT TEAM</h2>
 
-    <form:form method="POST" modelAttribute="gameTeamDetails" class="bg-light p-5 contact-form">
+    <form:form method="POST" action="/editTeam" modelAttribute="gameTeamDetails" class="bg-light p-5 contact-form">
         <h3 class="heading">${gameTeamToEdit.name}</h3>
-
+        <h2 class="heading">Captain gets points x2!</h2>
         <spring:bind path="cyclist">
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 your Captain:
@@ -41,7 +41,7 @@
             </div>
         </spring:bind>
 
-        <input type="submit" value="Play!" class="btn btn-primary py-3 px-5">
+        <input type="submit" value="Add" class="btn btn-primary py-3 px-5">
         </div>
     </form:form>
 

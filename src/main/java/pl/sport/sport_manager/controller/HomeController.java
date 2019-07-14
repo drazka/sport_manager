@@ -100,6 +100,11 @@ public class HomeController {
             model.addAttribute("message", "You have been logged out successfully.");
         return "login"; }
 
+
+    @PostMapping("/login")
+    public String homePageAfterLogin() {
+        return "redirect:/TourDeFranceGame/"; }
+
     @GetMapping("/register")
     public String registerPageShow(Model model) {
         model.addAttribute("userForm", new User());
@@ -116,5 +121,7 @@ public class HomeController {
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
         return "redirect:/createTeam"; }
 
-
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact"; }
 }

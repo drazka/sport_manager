@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row block-9">
             <div class="col-md-6 order-md-last d-flex">
-                <form method="POST" action="${contextPath}/TourDeFranceGame/login" class="bg-light p-5 contact-form">
+                <form method="POST" class="bg-light p-5 contact-form">
                     <h3 class="heading">LOG IN</h3>
 
                     <div class="form-group ${error != null ? 'has-error' : ''}">

@@ -11,7 +11,7 @@
   <body>
     <%@ include file="/WEB-INF/jsp/generals/header.jsp" %>
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -31,7 +31,7 @@
 
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry">
-              <a href="/stage-result/${stage.id}"  class="block-20" style="background-image: url('images/image_${stage.id}.jpg');">
+              <a href="/TourDeFranceGame/stage-result/${stage.id}"  class="block-20" style="background-image: url('/resources/images/image_${stage.id}.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -43,7 +43,7 @@
               			<span class="mos"><fmt:formatDate value="${stage.startDate}" pattern="MMM"/></span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">${stage.name}</a></h3>
+                <h3 class="heading">${stage.name}</h3>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@
       </div>
     </section>
 		
-		<section class="ftco-subscribe img" style="background-image: url(images/bg_2.jpg);">
+		<section class="ftco-subscribe img" style="background-image: url(/resources/images/bg_2.jpg);">
       <div class="overlay">
         <div class="container">
           <div class="row d-flex justify-content-center">

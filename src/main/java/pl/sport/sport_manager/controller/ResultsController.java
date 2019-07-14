@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pl.sport.sport_manager.entity.Competition;
 import pl.sport.sport_manager.entity.CyclistType;
 import pl.sport.sport_manager.entity.Stage;
@@ -20,6 +21,7 @@ import java.util.List;
 
 
 @Controller
+@RequestMapping(path = "/TourDeFranceGame")
 public class ResultsController {
 
     @Autowired
@@ -55,9 +57,9 @@ public class ResultsController {
         System.out.println("---------------------NAME------------");
         System.out.println(stage.getName());
         System.out.println("---------------------END------------");
-        CyclistType cyclistType1 = cyclistTypeRepository.findById(1L);
-        CyclistType cyclistType2 = cyclistTypeRepository.findById(2L);
-        CyclistType cyclistType3 = cyclistTypeRepository.findById(3L);
+        CyclistType cyclistType1 = cyclistTypeRepository.findById(3L);
+        CyclistType cyclistType2 = cyclistTypeRepository.findById(1L);
+        CyclistType cyclistType3 = cyclistTypeRepository.findById(2L);
         List<StageRanking> stageRankingListYoung = stageRankingRepository
                 .findStageRankingsByStageAndCyclistType(stage, cyclistType1);
         List<StageRanking> stageRankingListSpeed = stageRankingRepository

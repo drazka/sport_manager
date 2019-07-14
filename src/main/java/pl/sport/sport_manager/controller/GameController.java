@@ -22,6 +22,7 @@ public class GameController {
 
     final static long budgetAmount = 1000000;
     final static long competitionId = 1;
+    final static long capitainType = 1;
 
     @Autowired
     GameTeamRepository gameTeamRepository;
@@ -37,6 +38,12 @@ public class GameController {
 
     @Autowired
     CyclistRepository cyclistRepository;
+
+    @Autowired
+    GameTeamDetailsRepository gameTeamDetailsRepository;
+
+    @Autowired
+    CyclistTypeRepository cyclistTypeRepository;
 
     @ModelAttribute("cyclists")
     public List<Cyclist> cyclist() {return cyclistRepository.findAll();}
@@ -91,6 +98,22 @@ public class GameController {
         model.addAttribute("gameTeamToEdit", gameTeamToEdit);
         model.addAttribute("gameTeamDetails", gameTeamDetails);
         return "/game/editTeam";
+    }
+
+    @PostMapping("/editTeam")
+    public String editTeamYouth(Model model,@ModelAttribute @Valid GameTeamDetails gameTeamDetails,
+                           BindingResult result) {
+        if (result.hasErrors()) {
+            return "/game/editTeam";
+        }
+        gameTeamDetails.setCapitan(true);
+        gameTeamDetails.setCyclistType(cyclistTypeRepository.findById(capitainType));
+        gameTeamDetailsRepository.save(gameTeamDetails);
+
+        GameTeamDetails gameTeamDetailsYouth = new GameTeamDetails();
+        model.addAttribute("gameTeamDetails", gameTeamDetails);
+        model.addAttribute("gameTeamDetailsYouth", gameTeamDetailsYouth);
+        return "/game/editTeamYouth";
     }
 
 

@@ -28,12 +28,19 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="/TourDeFranceGame/" class="nav-link">Home</a></li>
-                <li class="nav-item cta"><a href="/createTeam" class="nav-link">Create Team</a></li>
-                <li class="nav-item"><a href="games.html" class="nav-link">Games</a></li>
-                <li class="nav-item"><a href="/stages-result" class="nav-link">Stage results</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="/TourDeFranceGame/login" class="nav-link">nie wiem co</a></li>
+                <c:if test="${pageContext.request.userPrincipal.name == null}">
+                    <li class="nav-item"><a href="/TourDeFranceGame/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/login" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/register" class="nav-link">Register</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/stages-result" class="nav-link">Stage results</a></li>
+                </c:if>
+
+            <c:if test="${pageContext.request.userPrincipal.name != null}">
+                <li class="nav-item"><a href="/createTeam" class="nav-link">Create Team</a></li>
+                <li class="nav-item"><a href="/chooseCyclists" class="nav-link">Edit your team</a></li>
+                <li class="nav-item"><a href="/TourDeFranceGame/stages-result" class="nav-link">Stage results</a></li>
+            </c:if>
 
             </ul>
         </div>

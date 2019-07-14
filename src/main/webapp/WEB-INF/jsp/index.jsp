@@ -19,7 +19,7 @@
           <div class="col-md-6 mt-5 pt-5 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Cycling Game</h1>
             <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Put your management skills to the test</p>
-            <p><a href="#" class="btn btn-secondary py-3 px-4">PLAY</a> <a href="#" class="btn btn-primary py-3 px-4">RANKING</a></p>
+            <p><a href="/createTeam" class="btn btn-secondary py-3 px-4">PLAY</a> <a href="#" class="btn btn-primary py-3 px-4">RANKING</a></p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
 		          	</div>
 	          	</div>
 				  <div class="text-center ftco-animate">
-				  <p class="mb-0"><a href="/stage-result" class="btn btn-black">Stage Result</a>   <a href="#" class="btn btn-black">General Result</a></p>
+				  <p class="mb-0"><a href="/TourDeFranceGame/stages-result" class="btn btn-black">Stage Result</a>   <a href="#" class="btn btn-black">General Result</a></p>
 				  </div>
 				  </div>
 					</div>
@@ -101,6 +101,7 @@
 					<div class="col-md-12 carousel-game-schedule owl-carousel">
 						<c:forEach items="${allStages}" var="stage">
 						<div class="item">
+							<a href="/TourDeFranceGame/stage-result/${stage.id}"></a>
 							<div class="game-sched text-vs text-center">
 								<div class="divider"><p>
 
@@ -111,7 +112,7 @@
 								</p></div>
 								<h1> ${stage.name} </h1>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(/resources/images/team-5.jpg);"></div>
+									<div class="img" style="background-image: url(/resources/images/team-${stage.id}.jpg);"></div>
 									<h3><span>${stage.place}</span></h3>
 								</div>
 							</div>
@@ -425,7 +426,7 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Our Growth</a></h3>
+                <h3 class="heading"><a href="#">News from last stage</a></h3>
               </div>
             </div>
           </div>
@@ -443,43 +444,8 @@
               			<span class="mos">May</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Marketing Growth</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">29</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">May</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Sport Growth</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/resources/images/image_4.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">29</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">May</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Why Lead Generation is Key for Growth</a></h3>
+                <h3 class="heading"><a href="#">News from last stage</a></h3>
+
               </div>
             </div>
           </div>
