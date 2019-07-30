@@ -48,7 +48,9 @@ public class GameController {
     @ModelAttribute("cyclists")
     public List<Cyclist> cyclist() {return cyclistRepository.findAll();}
 
-    
+    @ModelAttribute("cyclistsUnder25")
+    public List<Cyclist> cyclistUnder25() {return cyclistRepository.findCyclistByAgeLessThanEqual(25);}
+
     private User getLoggedInUser() {
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User user = userRepository.findByUsername(userDetails.getUsername());

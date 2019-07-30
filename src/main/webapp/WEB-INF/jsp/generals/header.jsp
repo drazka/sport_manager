@@ -34,12 +34,16 @@
                     <li class="nav-item"><a href="/TourDeFranceGame/login" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="/TourDeFranceGame/register" class="nav-link">Register</a></li>
                     <li class="nav-item"><a href="/TourDeFranceGame/stages-result" class="nav-link">Stage results</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/general-result" class="nav-link">General results</a></li>
+                    <li class="nav-item"><a href="/TourDeFranceGame/game-result" class="nav-link">The Best Players Ranking</a></li>
                 </c:if>
 
             <c:if test="${pageContext.request.userPrincipal.name != null}">
                 <li class="nav-item"><a href="/createTeam" class="nav-link">Create Team</a></li>
                 <li class="nav-item"><a href="/chooseCyclists" class="nav-link">Edit your team</a></li>
                 <li class="nav-item"><a href="/TourDeFranceGame/stages-result" class="nav-link">Stage results</a></li>
+                <li class="nav-item"><a href="/TourDeFranceGame/general-result" class="nav-link">General results</a></li>
+                <li class="nav-item"><a href="/TourDeFranceGame/game-result" class="nav-link">The Best Players Ranking</a></li>
             </c:if>
 
             </ul>

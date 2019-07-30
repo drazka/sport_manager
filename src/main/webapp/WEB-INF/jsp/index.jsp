@@ -101,7 +101,7 @@
 					<div class="col-md-12 carousel-game-schedule owl-carousel">
 						<c:forEach items="${allStages}" var="stage">
 						<div class="item">
-							<a href="/TourDeFranceGame/stage-result/${stage.id}"></a>
+
 							<div class="game-sched text-vs text-center">
 								<div class="divider"><p>
 
@@ -114,6 +114,7 @@
 								<div class="team-logo text-center">
 									<div class="img" style="background-image: url(/resources/images/team-${stage.id}.jpg);"></div>
 									<h3><span>${stage.place}</span></h3>
+									<a href="/TourDeFranceGame/stage-result/${stage.id}">See results</a>
 								</div>
 							</div>
 	          			</div>
@@ -158,7 +159,7 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-6 heading-section text-center ftco-animate">
           	<span class="subheading">Schedule</span>
-            <h2 class="mb-4">Next Stage</h2>
+            <h2 class="mb-4">TO DO</h2>
           </div>
         </div>
         <div class="row">
@@ -221,7 +222,7 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-6 heading-section heading-section-white text-center ftco-animate">
           	<span class="subheading">Team Squad</span>
-            <h2 class="mb-4">Our Team <span>Squad</span></h2>
+            <h2 class="mb-4">Our Team TO DO<span>Squad</span></h2>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
           </div>
         </div>
@@ -320,7 +321,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-          	<span class="subheading">Our Users</span>
+          	<span class="subheading">Our Users TO DO</span>
             <h2 class="mb-4">Happy Users</h2>
           </div>
         </div>

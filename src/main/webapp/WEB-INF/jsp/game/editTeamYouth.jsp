@@ -30,12 +30,12 @@
 
     <form:form method="POST" modelAttribute="gameTeamDetailsYouth" class="bg-light p-5 contact-form">
         <h3 class="heading">${gameTeamDetails.gameTeam.name}</h3>
-        <h2 class="heading">Captain gets points x2!</h2>
+        <h2 class="heading">Cyclist Under 25 gets extra point when win!</h2>
         <spring:bind path="cyclist">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                your Captain:
+                your Youth:
                 <form:select cssClass="browser-default custom-select custom-select-lg mb-3"
-                             path="cyclist" items="${cyclists}"
+                             path="cyclist" items="${cyclistsUnder25}"
                              itemLabel="name" itemValue="id"/><br>
                 <form:errors path = "cyclist"/>
             </div>
